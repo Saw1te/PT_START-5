@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS phonenum(
     phoneid INT PRIMARY KEY,
     phonenumbers VARCHAR(255) NOT NULL
 );
-INSERT INTO emails(emailid, email) VALUES(1, 'k.sawitskiy@mail.ru') ON CONFLICT DO NOTHING;
+INSERT INTO emails(emailid, email) VALUES(1, 'example1@mail.ru') ON CONFLICT DO NOTHING;
 INSERT INTO emails(emailid, email) VALUES(2, 'google@gmail.com') ON CONFLICT DO NOTHING;
 INSERT INTO phonenum(phoneid, phonenumbers) VALUES(1, '89775556677') ON CONFLICT DO NOTHING;
 INSERT INTO phonenum(phoneid, phonenumbers) VALUES(2, '+7-999-888-77-66') ON CONFLICT DO NOTHING;
