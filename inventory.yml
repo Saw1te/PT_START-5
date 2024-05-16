@@ -1,0 +1,28 @@
+all:
+  vars:
+    DB_REPL_USER: repl_user
+    DB_REPL_PASSWORD: kali
+    POSTGRES_VERSION: 14
+    DB_HOST: 192.168.1.45
+  hosts:
+    host01:
+      ansible_host: 192.168.1.45
+      ansible_user: root
+      ansible_ssh_pass: kali
+      github_repo: https://github.com/Saw1te/PT_START-5.git
+      dir: /home/kali
+      TOKEN: 
+      RM_HOST: 192.168.1.45
+      RM_PORT: 22
+      RM_USER: root
+      RM_PASSWORD: kali
+      DB_USER: postgres
+      DB_PASSWORD: kali
+      DB_PORT: 5432
+      DB_DATABASE: pt_bot
+      DB_REPL_HOST: db_repl
+      DB_REPL_PORT: 5432
+    host02:
+      ansible_host: 192.168.1.56
+      ansible_user: root
+      ansible_ssh_pass: kali
