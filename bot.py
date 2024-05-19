@@ -184,7 +184,14 @@ def verifyPasswordCommand(update: Update, context):
 
 def verifyPassword(update: Update, context):
     user_input = update.message.text
-    if re.fullmatch(r'[A-Za-z0-9!@#$%^&*().]{8,}', user_input):
+    pattern = (
+        r'^(?=.*[A-Z])'
+        r'(?=.*[a-z])'
+        r'(?=.*\d)'
+        r'(?=.*[!@#$%^&*()?])'
+        r'.{8,}$'
+    )
+    if re.match(pattern, user_input):
         update.message.reply_text('Пароль сложный')
     else:
         update.message.reply_text('Пароль простой')
